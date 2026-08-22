@@ -144,60 +144,71 @@
 <main>
 
 <!-- ============ HERO ============ -->
-<section id="inicio" class="relative overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-28">
+<section id="inicio" class="relative overflow-hidden pt-8 pb-16 lg:py-24">
+  <!-- Imagem de Fundo Mobile -->
+  <div class="block lg:hidden absolute inset-0 pointer-events-none z-0">
+    <img
+      src="./pet_celular.webp"
+      alt="Cachorro feliz atendido na clínica"
+      class="w-full h-full object-cover object-bottom opacity-25"
+    >
+    <div class="absolute inset-0 bg-gradient-to-t from-base via-base/80 to-transparent"></div>
+  </div>
+
   <i data-lucide="paw-print" class="paw-dot hidden md:block absolute top-24 left-[6%] w-8 h-8 rotate-12"></i>
   <i data-lucide="paw-print" class="paw-dot hidden md:block absolute bottom-16 left-[18%] w-6 h-6 -rotate-12"></i>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
     <div>
-      <span class="inline-flex items-center gap-2 bg-mint text-forest text-sm font-semibold px-4 py-2 rounded-full">
+      <span class="inline-flex items-center gap-2 bg-mint text-forest text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
         <i data-lucide="heart-handshake" class="w-4 h-4"></i>
         Atendimento com hora marcada e sem correria
       </span>
 
-      <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.12] text-forestDark mt-6">
+      <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] leading-[1.15] text-forestDark mt-5">
         Cuidamos do seu pet como parte da família
       </h1>
 
-      <p class="text-lg text-forestDark/70 mt-6 max-w-lg leading-relaxed">
+      <p class="text-base sm:text-lg text-forestDark/70 mt-5 max-w-lg leading-relaxed">
         Clínica veterinária e espaço de banho e tosa em um só lugar. Consultas, vacinas, banho relaxante e tosa na medida certa, tudo com uma equipe que conhece cada bichinho pelo nome.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 mt-9">
-        <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-forest hover:bg-accent text-white font-semibold px-7 py-4 rounded-full transition-colors">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
+        <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-forest hover:bg-accent text-white font-semibold px-7 py-4 rounded-full transition-colors shadow-md">
           Agendar Atendimento
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
-        <a href="#antes-depois" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint text-forestDark font-semibold px-7 py-4 rounded-full border border-forest/10 transition-colors">
-          <span class="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center">
+        <a href="#antes-depois" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint text-forestDark font-semibold px-7 py-4 rounded-full border border-forest/10 transition-colors shadow-sm">
+          <span class="w-7 h-7 rounded-full bg-forest/10 flex items-center justify-center">
             <i data-lucide="play" class="w-3.5 h-3.5 text-forest fill-forest"></i>
           </span>
           Ver Transformações
         </a>
       </div>
 
-      <div class="flex items-center gap-8 mt-11 text-sm">
+      <div class="flex items-center gap-6 sm:gap-8 mt-9 text-sm">
         <div>
           <p class="font-display font-bold text-2xl text-forest">12 anos</p>
-          <p class="text-forestDark/60">de cuidado no bairro</p>
+          <p class="text-forestDark/60 text-xs sm:text-sm">de cuidado no bairro</p>
         </div>
-        <div class="w-px h-10 bg-forest/10"></div>
+        <div class="w-px h-9 bg-forest/10"></div>
         <div>
           <p class="font-display font-bold text-2xl text-forest">4,9 ★</p>
-          <p class="text-forestDark/60">avaliação dos tutores</p>
+          <p class="text-forestDark/60 text-xs sm:text-sm">avaliação dos tutores</p>
         </div>
       </div>
     </div>
 
-    <div class="relative">
+    <!-- Imagem Desktop -->
+    <div class="hidden lg:block relative">
       <div class="absolute -inset-6 sm:-inset-10 bg-mint blob-hero -z-10"></div>
       <img
         src="https://images.unsplash.com/photo-1760791510936-eef13da5018b?auto=format&fit=crop&w=1000&q=80"
         alt="Golden retriever feliz e saudável olhando para a câmera"
-        class="w-full h-[380px] sm:h-[460px] object-cover blob-hero shadow-xl"
+        class="w-full h-[460px] object-cover blob-hero shadow-xl"
       >
-      <div class="absolute -bottom-5 -left-4 sm:-left-8 bg-white rounded-2xl shadow-lg px-5 py-4 flex items-center gap-3">
+      <div class="absolute -bottom-5 -left-6 bg-white rounded-2xl shadow-lg px-5 py-4 flex items-center gap-3">
         <span class="w-11 h-11 rounded-full bg-peach flex items-center justify-center">
           <i data-lucide="shield-check" class="w-5 h-5 text-forest"></i>
         </span>
@@ -465,7 +476,7 @@
   </div>
 </section>
 
-<!-- ============ ANTES & DEPOIS (AJUSTADO) ============ -->
+<!-- ============ ANTES & DEPOIS ============ -->
 <section id="antes-depois" class="py-20 sm:py-28 bg-white/60 border-y border-forest/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto">
