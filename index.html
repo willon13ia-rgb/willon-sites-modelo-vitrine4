@@ -143,82 +143,85 @@
 
 <main>
 
-<!-- ============ HERO ============ -->
-<section id="inicio" class="relative overflow-hidden pt-8 pb-16 lg:py-24">
-  <!-- Imagem de Fundo Mobile -->
-  <div class="block lg:hidden absolute inset-0 pointer-events-none z-0">
-    <img
-      src="./pet_celular.webp"
-      alt="Cachorro feliz atendido na clínica"
-      class="w-full h-full object-cover object-bottom opacity-25"
-    >
-    <div class="absolute inset-0 bg-gradient-to-t from-base via-base/80 to-transparent"></div>
-  </div>
+<!-- ============ HERO (RESPONSIVO COM CELULAR 100% NÍTIDO) ============ -->
+<section id="inicio" class="relative overflow-hidden bg-base">
+  <div class="relative min-h-[1120px] lg:min-h-[640px] flex items-start lg:items-center">
 
-  <i data-lucide="paw-print" class="paw-dot hidden md:block absolute top-24 left-[6%] w-8 h-8 rotate-12"></i>
-  <i data-lucide="paw-print" class="paw-dot hidden md:block absolute bottom-16 left-[18%] w-6 h-6 -rotate-12"></i>
-
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-
-    <div>
-      <span class="inline-flex items-center gap-2 bg-mint text-forest text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
-        <i data-lucide="heart-handshake" class="w-4 h-4"></i>
-        Atendimento com hora marcada e sem correria
-      </span>
-
-      <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] leading-[1.15] text-forestDark mt-5">
-        Cuidamos do seu pet como parte da família
-      </h1>
-
-      <p class="text-base sm:text-lg text-forestDark/70 mt-5 max-w-lg leading-relaxed">
-        Clínica veterinária e espaço de banho e tosa em um só lugar. Consultas, vacinas, banho relaxante e tosa na medida certa, tudo com uma equipe que conhece cada bichinho pelo nome.
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
-        <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-forest hover:bg-accent text-white font-semibold px-7 py-4 rounded-full transition-colors shadow-md">
-          Agendar Atendimento
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-        <a href="#antes-depois" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint text-forestDark font-semibold px-7 py-4 rounded-full border border-forest/10 transition-colors shadow-sm">
-          <span class="w-7 h-7 rounded-full bg-forest/10 flex items-center justify-center">
-            <i data-lucide="play" class="w-3.5 h-3.5 text-forest fill-forest"></i>
-          </span>
-          Ver Transformações
-        </a>
-      </div>
-
-      <div class="flex items-center gap-6 sm:gap-8 mt-9 text-sm">
-        <div>
-          <p class="font-display font-bold text-2xl text-forest">12 anos</p>
-          <p class="text-forestDark/60 text-xs sm:text-sm">de cuidado no bairro</p>
-        </div>
-        <div class="w-px h-9 bg-forest/10"></div>
-        <div>
-          <p class="font-display font-bold text-2xl text-forest">4,9 ★</p>
-          <p class="text-forestDark/60 text-xs sm:text-sm">avaliação dos tutores</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Imagem Desktop -->
-    <div class="hidden lg:block relative">
-      <div class="absolute -inset-6 sm:-inset-10 bg-mint blob-hero -z-10"></div>
+    <!-- Imagem Mobile (Nítida e posicionada na base) -->
+    <div class="block lg:hidden absolute inset-0 pointer-events-none z-0">
       <img
-        src="https://images.unsplash.com/photo-1760791510936-eef13da5018b?auto=format&fit=crop&w=1000&q=80"
-        alt="Golden retriever feliz e saudável olhando para a câmera"
-        class="w-full h-[460px] object-cover blob-hero shadow-xl"
+        src="./pet_celular.webp"
+        alt="Cachorro feliz atendido na clínica"
+        class="w-full h-full object-cover object-bottom"
       >
-      <div class="absolute -bottom-5 -left-6 bg-white rounded-2xl shadow-lg px-5 py-4 flex items-center gap-3">
-        <span class="w-11 h-11 rounded-full bg-peach flex items-center justify-center">
-          <i data-lucide="shield-check" class="w-5 h-5 text-forest"></i>
-        </span>
-        <div class="text-sm">
-          <p class="font-semibold text-forestDark">Produtos seguros</p>
-          <p class="text-forestDark/60">e hipoalergênicos</p>
-        </div>
-      </div>
     </div>
 
+    <!-- Patinhas decorativas Desktop -->
+    <i data-lucide="paw-print" class="paw-dot hidden md:block absolute top-24 left-[6%] w-8 h-8 rotate-12"></i>
+    <i data-lucide="paw-print" class="paw-dot hidden md:block absolute bottom-16 left-[18%] w-6 h-6 -rotate-12"></i>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center w-full pt-8 pb-[480px] lg:py-20">
+
+      <div>
+        <span class="inline-flex items-center gap-2 bg-mint text-forest text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow-sm">
+          <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+          Atendimento com hora marcada e sem correria
+        </span>
+
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] leading-[1.15] text-forestDark mt-5">
+          Cuidamos do seu pet como parte da família
+        </h1>
+
+        <p class="text-base sm:text-lg text-forestDark/70 mt-5 max-w-lg leading-relaxed">
+          Clínica veterinária e espaço de banho e tosa em um só lugar. Consultas, vacinas, banho relaxante e tosa na medida certa, tudo com uma equipe que conhece cada bichinho pelo nome.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
+          <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-forest hover:bg-accent text-white font-semibold px-7 py-4 rounded-full transition-colors shadow-md">
+            Agendar Atendimento
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#antes-depois" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint text-forestDark font-semibold px-7 py-4 rounded-full border border-forest/10 transition-colors shadow-sm">
+            <span class="w-7 h-7 rounded-full bg-forest/10 flex items-center justify-center">
+              <i data-lucide="play" class="w-3.5 h-3.5 text-forest fill-forest"></i>
+            </span>
+            Ver Transformações
+          </a>
+        </div>
+
+        <div class="flex items-center gap-6 sm:gap-8 mt-9 text-sm">
+          <div>
+            <p class="font-display font-bold text-2xl text-forest">12 anos</p>
+            <p class="text-forestDark/60 text-xs sm:text-sm">de cuidado no bairro</p>
+          </div>
+          <div class="w-px h-9 bg-forest/10"></div>
+          <div>
+            <p class="font-display font-bold text-2xl text-forest">4,9 ★</p>
+            <p class="text-forestDark/60 text-xs sm:text-sm">avaliação dos tutores</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagem Desktop com Moldura Orgânica -->
+      <div class="hidden lg:block relative">
+        <div class="absolute -inset-6 sm:-inset-10 bg-mint blob-hero -z-10"></div>
+        <img
+          src="https://images.unsplash.com/photo-1760791510936-eef13da5018b?auto=format&fit=crop&w=1000&q=80"
+          alt="Golden retriever feliz e saudável olhando para a câmera"
+          class="w-full h-[460px] object-cover blob-hero shadow-xl"
+        >
+        <div class="absolute -bottom-5 -left-6 bg-white rounded-2xl shadow-lg px-5 py-4 flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-peach flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5 text-forest"></i>
+          </span>
+          <div class="text-sm">
+            <p class="font-semibold text-forestDark">Produtos seguros</p>
+            <p class="text-forestDark/60">e hipoalergênicos</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -348,7 +351,7 @@
         <h3 class="font-display font-bold text-lg text-forestDark mt-6">Banho e Tosa</h3>
         <p class="text-forestDark/65 text-sm mt-2 leading-relaxed flex-1">Banho relaxante e tosa na medida certa, deixando o pet cheiroso e bonito.</p>
         <a href="#planos" class="inline-flex items-center gap-1 text-forest font-semibold text-sm mt-6 hover:gap-2 transition-all">
-          Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          Ver Detalhas <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
 
