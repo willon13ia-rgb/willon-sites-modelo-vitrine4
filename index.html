@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focinho Feliz | Clínica Veterinária & Banho e Tosa</title>
+<meta name="description" content="Clínica veterinária e banho e tosa em São Paulo. Cuidado completo para o seu pet, do check up ao spa, com uma equipe que trata cada animal como se fosse da família.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#1E5136',
+          forestDark: '#183D2A',
+          accent: '#2A6B48',
+          mint: '#EBF6EE',
+          peach: '#FDF0EC',
+          almond: '#FDF5E6',
+          iceblue: '#EBF3FC',
+          lavender: '#F2EEFD',
+          base: '#FAFAF8',
+        },
+        fontFamily: {
+          display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          sans: ['"Inter"', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; }
+  h1, h2, h3, h4, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  .blob-hero {
+    border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  }
+  .blob-about {
+    border-radius: 63% 37% 39% 61% / 47% 60% 40% 53%;
+  }
+  @media (max-width: 768px) {
+    .blob-hero, .blob-about { border-radius: 2rem; }
+  }
+
+  .paw-dot { color: rgba(30, 81, 54, 0.18); }
+
+  #ba-handle { touch-action: none; }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  input:focus-visible, a:focus-visible, button:focus-visible {
+    outline: 2px solid #2A6B48;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+
+<body class="text-forestDark antialiased">
+
+<!-- ============ PREVIEW RIBBON ============ -->
+<div class="w-full bg-slate-900 text-white text-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex flex-col sm:flex-row items-center justify-center gap-2 text-center">
+    <span>Você está visualizando o <strong class="font-semibold">Modelo Comércio 4</strong> da <strong class="font-semibold">Willon Sites</strong></span>
+    <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Quero%20o%20site%20Modelo%20Comercio%204" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-1.5 bg-accent hover:bg-emerald-600 transition-colors text-white text-xs font-semibold px-4 py-1.5 rounded-full whitespace-nowrap">
+      Quero este site
+      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+    </a>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="sticky top-0 z-40 bg-base/90 backdrop-blur-md border-b border-forest/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="#inicio" class="flex items-center gap-2.5 group">
+        <span class="w-11 h-11 rounded-2xl bg-forest flex items-center justify-center text-white group-hover:bg-accent transition-colors">
+          <i data-lucide="paw-print" class="w-5 h-5"></i>
+        </span>
+        <span class="font-display font-bold text-xl text-forestDark">Focinho Feliz</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9 font-medium text-[15px] text-forestDark/80">
+        <a href="#inicio" class="hover:text-forest transition-colors">Início</a>
+        <a href="#servicos" class="hover:text-forest transition-colors">Serviços</a>
+        <a href="#sobre" class="hover:text-forest transition-colors">Sobre Nós</a>
+        <a href="#planos" class="hover:text-forest transition-colors">Planos</a>
+        <a href="#antes-depois" class="hover:text-forest transition-colors">Antes & Depois</a>
+        <a href="#contato" class="hover:text-forest transition-colors">Contato</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="tel:+551147852290" class="flex items-center gap-2 text-sm font-medium text-forestDark/80 hover:text-forest transition-colors">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          (11) 4785-2290
+        </a>
+        <a href="#contato" class="bg-forest hover:bg-accent text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors">
+          Agendar Horário
+        </a>
+      </div>
+
+      <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-full hover:bg-forest/5 transition-colors">
+        <i data-lucide="menu" id="icon-menu" class="w-6 h-6 text-forestDark"></i>
+        <i data-lucide="x" id="icon-close" class="w-6 h-6 text-forestDark hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-forest/5 bg-base">
+    <nav class="px-4 sm:px-6 py-5 flex flex-col gap-1 font-medium text-forestDark/85">
+      <a href="#inicio" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5">Início</a>
+      <a href="#servicos" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5">Serviços</a>
+      <a href="#sobre" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5">Sobre Nós</a>
+      <a href="#planos" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5">Planos</a>
+      <a href="#antes-depois" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5">Antes & Depois</a>
+      <a href="#contato" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5">Contato</a>
+      <a href="tel:+551147852290" class="mobile-link py-3 px-2 rounded-xl hover:bg-forest/5 flex items-center gap-2">
+        <i data-lucide="phone" class="w-4 h-4"></i> (11) 4785-2290
+      </a>
+      <a href="#contato" class="mobile-link mt-2 bg-forest text-white text-center font-semibold px-6 py-3.5 rounded-full">
+        Agendar Horário
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="inicio" class="relative overflow-hidden pt-14 pb-20 sm:pt-20 sm:pb-28">
+  <i data-lucide="paw-print" class="paw-dot hidden md:block absolute top-24 left-[6%] w-8 h-8 rotate-12"></i>
+  <i data-lucide="paw-print" class="paw-dot hidden md:block absolute bottom-16 left-[18%] w-6 h-6 -rotate-12"></i>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+
+    <div>
+      <span class="inline-flex items-center gap-2 bg-mint text-forest text-sm font-semibold px-4 py-2 rounded-full">
+        <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+        Atendimento com hora marcada e sem correria
+      </span>
+
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.12] text-forestDark mt-6">
+        Cuidamos do seu pet como parte da família
+      </h1>
+
+      <p class="text-lg text-forestDark/70 mt-6 max-w-lg leading-relaxed">
+        Clínica veterinária e espaço de banho e tosa em um só lugar. Consultas, vacinas, banho relaxante e tosa na medida certa, tudo com uma equipe que conhece cada bichinho pelo nome.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-9">
+        <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-forest hover:bg-accent text-white font-semibold px-7 py-4 rounded-full transition-colors">
+          Agendar Atendimento
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#antes-depois" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-mint text-forestDark font-semibold px-7 py-4 rounded-full border border-forest/10 transition-colors">
+          <span class="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center">
+            <i data-lucide="play" class="w-3.5 h-3.5 text-forest fill-forest"></i>
+          </span>
+          Ver Transformações
+        </a>
+      </div>
+
+      <div class="flex items-center gap-8 mt-11 text-sm">
+        <div>
+          <p class="font-display font-bold text-2xl text-forest">12 anos</p>
+          <p class="text-forestDark/60">de cuidado no bairro</p>
+        </div>
+        <div class="w-px h-10 bg-forest/10"></div>
+        <div>
+          <p class="font-display font-bold text-2xl text-forest">4,9 ★</p>
+          <p class="text-forestDark/60">avaliação dos tutores</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute -inset-6 sm:-inset-10 bg-mint blob-hero -z-10"></div>
+      <img
+        src="https://images.unsplash.com/photo-1760791510936-eef13da5018b?auto=format&fit=crop&w=1000&q=80"
+        alt="Golden retriever feliz e saudável olhando para a câmera"
+        class="w-full h-[380px] sm:h-[460px] object-cover blob-hero shadow-xl"
+      >
+      <div class="absolute -bottom-5 -left-4 sm:-left-8 bg-white rounded-2xl shadow-lg px-5 py-4 flex items-center gap-3">
+        <span class="w-11 h-11 rounded-full bg-peach flex items-center justify-center">
+          <i data-lucide="shield-check" class="w-5 h-5 text-forest"></i>
+        </span>
+        <div class="text-sm">
+          <p class="font-semibold text-forestDark">Produtos seguros</p>
+          <p class="text-forestDark/60">e hipoalergênicos</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PILARES ============ -->
+<section class="border-y border-forest/5 bg-white/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="flex flex-col items-start gap-4">
+        <span class="w-14 h-14 rounded-2xl bg-mint flex items-center justify-center">
+          <i data-lucide="award" class="w-6 h-6 text-forest"></i>
+        </span>
+        <div>
+          <h3 class="font-display font-bold text-lg text-forestDark">Profissionais Certificados</h3>
+          <p class="text-forestDark/65 text-sm mt-1.5 leading-relaxed">Equipe formada e sempre atualizada, pronta para cuidar do seu pet com segurança.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-4">
+        <span class="w-14 h-14 rounded-2xl bg-peach flex items-center justify-center">
+          <i data-lucide="leaf" class="w-6 h-6 text-forest"></i>
+        </span>
+        <div>
+          <h3 class="font-display font-bold text-lg text-forestDark">Produtos Naturais & Seguros</h3>
+          <p class="text-forestDark/65 text-sm mt-1.5 leading-relaxed">Shampoos e cosméticos hipoalergênicos, sem químicos agressivos na pele do animal.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-4">
+        <span class="w-14 h-14 rounded-2xl bg-iceblue flex items-center justify-center">
+          <i data-lucide="sparkles" class="w-6 h-6 text-forest"></i>
+        </span>
+        <div>
+          <h3 class="font-display font-bold text-lg text-forestDark">Ambiente Livre de Estresse</h3>
+          <p class="text-forestDark/65 text-sm mt-1.5 leading-relaxed">Espaço pensado para deixar o pet à vontade, sem barulho, pressa ou aglomeração.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-start gap-4">
+        <span class="w-14 h-14 rounded-2xl bg-lavender flex items-center justify-center">
+          <i data-lucide="heart-pulse" class="w-6 h-6 text-forest"></i>
+        </span>
+        <div>
+          <h3 class="font-display font-bold text-lg text-forestDark">Saúde & Bem Estar</h3>
+          <p class="text-forestDark/65 text-sm mt-1.5 leading-relaxed">Do banho à consulta clínica, cada visita pensada para a saúde do seu animal.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE NÓS ============ -->
+<section id="sobre" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+
+    <div class="relative order-2 lg:order-1">
+      <div class="absolute -inset-6 sm:-inset-8 bg-lavender blob-about -z-10"></div>
+      <img
+        src="https://images.unsplash.com/photo-1654895716780-b4664497420d?auto=format&fit=crop&w=900&q=80"
+        alt="Veterinária segurando um cachorro no colo com carinho"
+        class="w-full h-[380px] sm:h-[440px] object-cover blob-about shadow-xl"
+      >
+    </div>
+
+    <div class="order-1 lg:order-2">
+      <span class="text-forest font-semibold text-sm tracking-wide">SOBRE NÓS</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-forestDark mt-3 leading-tight">
+        Uma equipe que entende de pet e de gente
+      </h2>
+      <p class="text-forestDark/70 mt-5 leading-relaxed">
+        A Focinho Feliz nasceu da vontade de oferecer, no mesmo endereço, o cuidado veterinário e o carinho do banho e tosa que todo tutor procura. Aqui, cada animal é atendido no seu tempo, com uma equipe que presta atenção nos detalhes e conversa com você em cada etapa.
+      </p>
+
+      <ul class="mt-8 space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-6 h-6 rounded-full bg-mint flex items-center justify-center shrink-0">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-forest"></i>
+          </span>
+          <span class="text-forestDark/80">Equipe formada por médicos veterinários e groomers experientes</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-6 h-6 rounded-full bg-mint flex items-center justify-center shrink-0">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-forest"></i>
+          </span>
+          <span class="text-forestDark/80">Produtos hipoalergênicos e livres de testes em animais</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-6 h-6 rounded-full bg-mint flex items-center justify-center shrink-0">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-forest"></i>
+          </span>
+          <span class="text-forestDark/80">Atendimento individual, sem pressa e sem fila de espera</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 w-6 h-6 rounded-full bg-mint flex items-center justify-center shrink-0">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-forest"></i>
+          </span>
+          <span class="text-forestDark/80">Acompanhamento por mensagem depois de cada consulta</span>
+        </li>
+      </ul>
+
+      <a href="#contato" class="inline-flex items-center gap-2 mt-9 bg-forestDark hover:bg-forest text-white font-semibold px-7 py-4 rounded-full transition-colors">
+        Conhecer Nossa Equipe
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section id="servicos" class="py-20 sm:py-28 bg-white/60 border-y border-forest/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl">
+      <span class="text-forest font-semibold text-sm tracking-wide">NOSSOS SERVIÇOS</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-forestDark mt-3 leading-tight">
+        Tudo que o seu pet precisa, em um só lugar
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-12">
+
+      <div class="bg-mint rounded-3xl p-7 flex flex-col">
+        <span class="w-14 h-14 rounded-2xl bg-white/70 flex items-center justify-center">
+          <i data-lucide="droplets" class="w-6 h-6 text-forest"></i>
+        </span>
+        <h3 class="font-display font-bold text-lg text-forestDark mt-6">Banho e Tosa</h3>
+        <p class="text-forestDark/65 text-sm mt-2 leading-relaxed flex-1">Banho relaxante e tosa na medida certa, deixando o pet cheiroso e bonito.</p>
+        <a href="#planos" class="inline-flex items-center gap-1 text-forest font-semibold text-sm mt-6 hover:gap-2 transition-all">
+          Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="bg-peach rounded-3xl p-7 flex flex-col">
+        <span class="w-14 h-14 rounded-2xl bg-white/70 flex items-center justify-center">
+          <i data-lucide="scissors" class="w-6 h-6 text-forest"></i>
+        </span>
+        <h3 class="font-display font-bold text-lg text-forestDark mt-6">Tosa Higiênica</h3>
+        <p class="text-forestDark/65 text-sm mt-2 leading-relaxed flex-1">Higiene das áreas mais sensíveis, feita com calma e bastante cuidado.</p>
+        <a href="#planos" class="inline-flex items-center gap-1 text-forest font-semibold text-sm mt-6 hover:gap-2 transition-all">
+          Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="bg-almond rounded-3xl p-7 flex flex-col">
+        <span class="w-14 h-14 rounded-2xl bg-white/70 flex items-center justify-center">
+          <i data-lucide="home" class="w-6 h-6 text-forest"></i>
+        </span>
+        <h3 class="font-display font-bold text-lg text-forestDark mt-6">Hotelzinho Pet</h3>
+        <p class="text-forestDark/65 text-sm mt-2 leading-relaxed flex-1">Hospedagem confortável para os dias em que você precisar viajar tranquilo.</p>
+        <a href="#contato" class="inline-flex items-center gap-1 text-forest font-semibold text-sm mt-6 hover:gap-2 transition-all">
+          Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="bg-iceblue rounded-3xl p-7 flex flex-col">
+        <span class="w-14 h-14 rounded-2xl bg-white/70 flex items-center justify-center">
+          <i data-lucide="stethoscope" class="w-6 h-6 text-forest"></i>
+        </span>
+        <h3 class="font-display font-bold text-lg text-forestDark mt-6">Consulta Veterinária</h3>
+        <p class="text-forestDark/65 text-sm mt-2 leading-relaxed flex-1">Check ups, vacinas e acompanhamento clínico com nossa equipe veterinária.</p>
+        <a href="#contato" class="inline-flex items-center gap-1 text-forest font-semibold text-sm mt-6 hover:gap-2 transition-all">
+          Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="bg-lavender rounded-3xl p-7 flex flex-col sm:col-span-2 lg:col-span-1">
+        <span class="w-14 h-14 rounded-2xl bg-white/70 flex items-center justify-center">
+          <i data-lucide="footprints" class="w-6 h-6 text-forest"></i>
+        </span>
+        <h3 class="font-display font-bold text-lg text-forestDark mt-6">Passeio e Adestramento</h3>
+        <p class="text-forestDark/65 text-sm mt-2 leading-relaxed flex-1">Passeios diários e treinamento para um pet mais calmo e equilibrado.</p>
+        <a href="#contato" class="inline-flex items-center gap-1 text-forest font-semibold text-sm mt-6 hover:gap-2 transition-all">
+          Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANOS / PACOTES ============ -->
+<section id="planos" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-forest font-semibold text-sm tracking-wide">PLANOS DE GROOMING</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-forestDark mt-3 leading-tight">
+        Pacotes de Cuidados & Banho
+      </h2>
+      <p class="text-forestDark/65 mt-4">Escolha o pacote que combina com a rotina do seu pet. Todos incluem produtos hipoalergênicos.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 mt-14 items-center">
+
+      <!-- Básico -->
+      <div class="bg-white border border-forest/10 rounded-3xl p-8 flex flex-col">
+        <h3 class="font-display font-bold text-xl text-forestDark">Básico</h3>
+        <p class="text-forestDark/60 text-sm mt-1">Para manter o dia a dia em dia</p>
+        <p class="mt-6"><span class="font-display font-extrabold text-4xl text-forestDark">R$ 89</span><span class="text-forestDark/60"> /banho</span></p>
+
+        <ul class="mt-7 space-y-3.5 text-sm text-forestDark/80 flex-1">
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Banho com shampoo hipoalergênico</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Secagem completa</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Escovação</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Perfume suave</li>
+        </ul>
+
+        <a href="#contato" class="mt-8 text-center bg-mint hover:bg-forest hover:text-white text-forest font-semibold px-6 py-3.5 rounded-full transition-colors">
+          Agendar Básico
+        </a>
+      </div>
+
+      <!-- Premium (destaque) -->
+      <div class="bg-forest rounded-3xl p-8 flex flex-col relative lg:-translate-y-4 shadow-xl">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-forest text-xs font-bold px-4 py-1.5 rounded-full">
+          Mais Popular
+        </span>
+        <h3 class="font-display font-bold text-xl text-white">Premium</h3>
+        <p class="text-white/70 text-sm mt-1">O favorito dos nossos tutores</p>
+        <p class="mt-6"><span class="font-display font-extrabold text-4xl text-white">R$ 139</span><span class="text-white/70"> /banho</span></p>
+
+        <ul class="mt-7 space-y-3.5 text-sm text-white/90 flex-1">
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-white shrink-0"></i>Tudo do plano Básico</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-white shrink-0"></i>Tosa higiênica incluída</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-white shrink-0"></i>Hidratação da pelagem</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-white shrink-0"></i>Escovação dos dentes</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-white shrink-0"></i>Perfume premium</li>
+        </ul>
+
+        <a href="#contato" class="mt-8 text-center bg-white hover:bg-almond text-forest font-semibold px-6 py-3.5 rounded-full transition-colors">
+          Agendar Premium
+        </a>
+      </div>
+
+      <!-- Deluxe -->
+      <div class="bg-white border border-forest/10 rounded-3xl p-8 flex flex-col">
+        <h3 class="font-display font-bold text-xl text-forestDark">Deluxe</h3>
+        <p class="text-forestDark/60 text-sm mt-1">Spa completo, de ponta a ponta</p>
+        <p class="mt-6"><span class="font-display font-extrabold text-4xl text-forestDark">R$ 219</span><span class="text-forestDark/60"> /banho</span></p>
+
+        <ul class="mt-7 space-y-3.5 text-sm text-forestDark/80 flex-1">
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Tudo do plano Premium</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Tosa completa na tesoura</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Spa das patinhas</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Aromaterapia relaxante</li>
+          <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-forest shrink-0"></i>Relatório de saúde da pele</li>
+        </ul>
+
+        <a href="#contato" class="mt-8 text-center bg-mint hover:bg-forest hover:text-white text-forest font-semibold px-6 py-3.5 rounded-full transition-colors">
+          Agendar Deluxe
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANTES & DEPOIS (AJUSTADO) ============ -->
+<section id="antes-depois" class="py-20 sm:py-28 bg-white/60 border-y border-forest/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="text-forest font-semibold text-sm tracking-wide">TRANSFORMAÇÃO</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-forestDark mt-3 leading-tight">
+        Pets Felizes, Tutores Encantados
+      </h2>
+      <p class="text-forestDark/65 mt-4">Arraste a barra para o lado e veja a diferença de um banho e tosa feito com carinho.</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-12">
+      <div id="ba-slider" class="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-white rounded-3xl overflow-hidden shadow-xl select-none border border-forest/10">
+
+        <!-- Imagem Depois (Base) -->
+        <img src="./pet_depois.webp"
+             alt="Cachorro Shih Tzu após a tosa, limpo e perfeitamente tosado"
+             class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none">
+
+        <!-- Imagem Antes (Camada Superior com recorte) -->
+        <div id="ba-before-wrap" class="absolute inset-0 w-1/2 overflow-hidden pointer-events-none">
+          <img src="./pet_antes.webp"
+               alt="Cachorro Shih Tzu antes da tosa, com pelos longos e precisando de cuidados"
+               class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+               style="width: var(--slider-width, 100%); max-width: none;">
+        </div>
+
+        <span class="absolute top-4 left-4 bg-forestDark/80 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full pointer-events-none shadow-sm">Antes</span>
+        <span class="absolute top-4 right-4 bg-forest/90 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full pointer-events-none shadow-sm">Depois</span>
+
+        <!-- Controle deslizante -->
+        <div id="ba-handle" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-md" style="left: 50%; transform: translateX(-50%);">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-xl flex items-center justify-center border-2 border-forest">
+            <i data-lucide="move-horizontal" class="w-5 h-5 text-forest"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO / HORÁRIOS / MAPA ============ -->
+<section id="contato" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-start">
+
+    <div>
+      <span class="text-forest font-semibold text-sm tracking-wide">CONTATO</span>
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-forestDark mt-3 leading-tight">
+        Vamos cuidar do seu pet
+      </h2>
+      <p class="text-forestDark/65 mt-4 max-w-md">Estamos por perto e prontos para receber você e seu bichinho. Ligue, mande mensagem ou apareça na clínica.</p>
+
+      <div class="mt-9 space-y-6">
+        <div class="flex items-start gap-4">
+          <span class="w-12 h-12 rounded-2xl bg-mint flex items-center justify-center shrink-0">
+            <i data-lucide="map-pin" class="w-5 h-5 text-forest"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-forestDark">Endereço</p>
+            <p class="text-forestDark/65 text-sm mt-0.5">Rua das Acácias, 482, Vila Madalena, São Paulo, SP</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="w-12 h-12 rounded-2xl bg-peach flex items-center justify-center shrink-0">
+            <i data-lucide="phone-call" class="w-5 h-5 text-forest"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-forestDark">Telefone e emergência</p>
+            <p class="text-forestDark/65 text-sm mt-0.5">(11) 4785-2290 · Plantão (11) 99887-1234</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="w-12 h-12 rounded-2xl bg-iceblue flex items-center justify-center shrink-0">
+            <i data-lucide="mail" class="w-5 h-5 text-forest"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-forestDark">E-mail</p>
+            <p class="text-forestDark/65 text-sm mt-0.5">contato@focinhofeliz.com.br</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <span class="w-12 h-12 rounded-2xl bg-lavender flex items-center justify-center shrink-0">
+            <i data-lucide="clock" class="w-5 h-5 text-forest"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-forestDark">Horário de funcionamento</p>
+            <p class="text-forestDark/65 text-sm mt-0.5">Segunda a sexta, das 8h às 19h</p>
+            <p class="text-forestDark/65 text-sm">Sábado, das 8h às 14h</p>
+            <p class="text-forestDark/65 text-sm">Emergências, todos os dias</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="relative rounded-3xl overflow-hidden h-[420px] sm:h-[460px] shadow-xl bg-gradient-to-br from-mint via-iceblue to-lavender">
+        <svg class="absolute inset-0 w-full h-full opacity-70" viewBox="0 0 400 400" preserveAspectRatio="none">
+          <path d="M0 80 H400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M0 160 H400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M0 240 H400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M0 320 H400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M80 0 V400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M160 0 V400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M240 0 V400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+          <path d="M320 0 V400" stroke="#1E5136" stroke-opacity="0.08" stroke-width="2"/>
+        </svg>
+
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[70%]">
+          <div class="w-16 h-16 rounded-full bg-forest shadow-lg flex items-center justify-center animate-bounce" style="animation-duration: 2.5s;">
+            <i data-lucide="paw-print" class="w-7 h-7 text-white"></i>
+          </div>
+          <div class="w-3 h-3 bg-forest/40 rounded-full mx-auto mt-1 blur-[2px]"></div>
+        </div>
+
+        <div class="absolute bottom-5 left-5 right-5 sm:left-6 sm:right-auto bg-white rounded-2xl shadow-lg p-5 sm:w-72">
+          <p class="font-display font-bold text-forestDark">Visite Nossa Clínica</p>
+          <p class="text-forestDark/60 text-sm mt-1">Vila Madalena, São Paulo</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 bg-forest hover:bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
+            Como Chegar
+            <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-almond rounded-[2.5rem] px-6 sm:px-14 py-12 grid lg:grid-cols-[auto_1fr_auto] gap-8 items-center overflow-hidden">
+
+      <img
+        src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=400&q=80"
+        alt="Filhote de golden retriever fofo"
+        class="w-28 h-28 sm:w-36 sm:h-36 rounded-3xl object-cover shadow-md mx-auto lg:mx-0"
+      >
+
+      <div class="text-center lg:text-left">
+        <h3 class="font-display font-bold text-2xl text-forestDark">Dicas de cuidado direto no seu e-mail</h3>
+        <p class="text-forestDark/65 mt-2">Alimentação, comportamento e bem-estar. Sem spam, só carinho pelo seu pet.</p>
+      </div>
+
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+        <label for="newsletter-email" class="sr-only">Seu e-mail</label>
+        <input id="newsletter-email" type="email" required placeholder="Seu melhor e-mail"
+               class="bg-white rounded-full px-5 py-3.5 text-sm text-forestDark placeholder:text-forestDark/40 border border-forest/10 focus:border-forest outline-none w-full sm:w-64">
+        <button type="submit" class="bg-forest hover:bg-accent text-white font-semibold px-7 py-3.5 rounded-full transition-colors whitespace-nowrap">
+          Inscrever
+        </button>
+      </form>
+      <p id="newsletter-msg" class="hidden lg:col-start-3 text-sm text-forest font-medium -mt-4 lg:mt-2"></p>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-forestDark text-white/80 mt-8 relative">
+  <svg class="w-full h-12 sm:h-16 -mb-px text-base" viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor">
+    <path d="M0 40C240 0 480 80 720 40C960 0 1200 80 1440 40V0H0V40Z" transform="translate(0, 0) scale(1, -1) translate(0, -80)"></path>
+  </svg>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div>
+        <a href="#inicio" class="flex items-center gap-2.5">
+          <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+            <i data-lucide="paw-print" class="w-4.5 h-4.5 text-white"></i>
+          </span>
+          <span class="font-display font-bold text-lg text-white">Focinho Feliz</span>
+        </a>
+        <p class="text-sm mt-4 leading-relaxed text-white/60">
+          Clínica veterinária e espaço de banho e tosa cuidando do seu pet com atenção de verdade, desde o primeiro passeio até a velhice tranquila.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-display font-semibold text-white mb-4">Links Rápidos</p>
+        <ul class="space-y-2.5 text-sm text-white/60">
+          <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
+          <li><a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+          <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
+          <li><a href="#planos" class="hover:text-white transition-colors">Planos</a></li>
+          <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-display font-semibold text-white mb-4">Serviços</p>
+        <ul class="space-y-2.5 text-sm text-white/60">
+          <li>Banho e Tosa</li>
+          <li>Tosa Higiênica</li>
+          <li>Hotelzinho Pet</li>
+          <li>Consulta Veterinária</li>
+          <li>Passeio e Adestramento</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-display font-semibold text-white mb-4">Atendimento</p>
+        <ul class="space-y-2.5 text-sm text-white/60">
+          <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i>(11) 4785-2290</li>
+          <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>contato@focinhofeliz.com.br</li>
+          <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i>Vila Madalena, São Paulo</li>
+          <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i>Seg a sáb, 8h às 19h</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-12 pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+      <p>© <span id="current-year"></span> Focinho Feliz. Todos os direitos reservados.</p>
+      <p>Site modelo por <a href="https://wa.me/5511974121551" target="_blank" rel="noopener" class="text-white/70 hover:text-white transition-colors">Willon Sites</a></p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    iconMenu.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const isHidden = mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    iconMenu.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(isHidden));
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Before / After slider funcional sincronizado
+  const baSlider = document.getElementById('ba-slider');
+  const baHandle = document.getElementById('ba-handle');
+  const baBeforeWrap = document.getElementById('ba-before-wrap');
+  const baBeforeImg = baBeforeWrap.querySelector('img');
+  let dragging = false;
+
+  function syncImageWidth() {
+    if (baSlider && baBeforeImg) {
+      baBeforeImg.style.width = baSlider.offsetWidth + 'px';
+    }
+  }
+
+  window.addEventListener('resize', syncImageWidth);
+  window.addEventListener('load', syncImageWidth);
+  syncImageWidth();
+
+  function setSliderPosition(clientX) {
+    const rect = baSlider.getBoundingClientRect();
+    let percent = ((clientX - rect.left) / rect.width) * 100;
+    percent = Math.max(0, Math.min(100, percent));
+    baBeforeWrap.style.width = percent + '%';
+    baHandle.style.left = percent + '%';
+  }
+
+  function startDrag(e) {
+    dragging = true;
+  }
+  function stopDrag() {
+    dragging = false;
+  }
+  function onDrag(e) {
+    if (!dragging) return;
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    setSliderPosition(clientX);
+  }
+
+  baHandle.addEventListener('mousedown', startDrag);
+  baHandle.addEventListener('touchstart', startDrag, { passive: true });
+  window.addEventListener('mouseup', stopDrag);
+  window.addEventListener('touchend', stopDrag);
+  window.addEventListener('mousemove', onDrag);
+  window.addEventListener('touchmove', onDrag, { passive: true });
+
+  baSlider.addEventListener('click', (e) => {
+    if (e.target === baHandle || baHandle.contains(e.target)) return;
+    setSliderPosition(e.clientX);
+  });
+
+  // Newsletter
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterMsg = document.getElementById('newsletter-msg');
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    newsletterMsg.textContent = 'Prontinho! Você vai começar a receber nossas dicas em breve.';
+    newsletterMsg.classList.remove('hidden');
+    newsletterForm.reset();
+  });
+
+  // Footer year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Header shadow on scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header.classList.add('shadow-sm');
+    } else {
+      header.classList.remove('shadow-sm');
+    }
+  });
+</script>
+
+</body>
+</html>
